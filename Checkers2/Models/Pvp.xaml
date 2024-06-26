@@ -1,0 +1,80 @@
+﻿<Window x:Class="Checkers2.Models.Pvp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkers2.Models"
+        mc:Ignorable="d"
+        Title="Chekers" MinHeight="570" MinWidth="970">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/bback.jpg"/>
+        </Grid.Background>
+        <Grid x:Name="board" Background="Black" Margin="10,10,400,10" MinHeight="500" MinWidth="500" MaxHeight="800" MaxWidth="800">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Grid Height="534" Margin="0,10,120,10" HorizontalAlignment="Right" Width="271">
+            <Canvas HorizontalAlignment="Center" VerticalAlignment="Top" Name="Asdasd" Height="181" Width="271">
+
+                <Image Canvas.Left="83" Canvas.Top="50" Source = "/Images/bp.png" Height="105" Width="106" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock x:Name="Bcount" Text="12" Canvas.Top="82" Canvas.Left="112" FontSize="36" FontFamily="Arial Black" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White"/>
+                <Label Content="Black pieces" RenderTransformOrigin="0.554,0.614" FontSize="22" FontFamily="Arial Black" Background="Transparent" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="53" Canvas.Top="10"/>
+            </Canvas>
+            <TextBlock TextWrapping="Wrap" x:Name="whosturn" Text="White's turn" Height="102" VerticalAlignment="Center" FontSize="36" TextAlignment="Center" Foreground="White"/>
+
+            <Canvas Margin="0,343,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="181" Width="271">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+
+                <Image Canvas.Left="82" Canvas.Top="26" Source = "/Images/wp.png" Height="105" Width="106" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <TextBlock x:Name="Wcount" Text="12" Canvas.Top="58" Canvas.Left="111" FontSize="36" FontFamily="Arial Black" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <Label Content="White pieces" RenderTransformOrigin="0.554,0.614" FontSize="22" FontFamily="Arial Black" Background="Transparent" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="52" Canvas.Top="136"/>
+            </Canvas>
+
+        </Grid>
+        <Button x:Name="res" Content="Resigne" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Margin="0,0,10,20" Click="res_Click" Height="35"/>
+        <Button x:Name="resb" Content="Resigne" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Margin="0,20,10,0" Click="resb_Click" Height="35"/>
+        <Button x:Name="draw" Content="Draw" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Margin="0,0,10,0" Click="draw_Click" Height="35"/>
+        <Rectangle x:Name="hide" Stroke="Black" Fill="#FF3E3E3E" Opacity =" 0.5"  Visibility="Collapsed"/>
+        <Grid x:Name="pop" Width="300" Height="220" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+            <Rectangle Stroke="Black" Margin="0,-2,0,0" Fill="White" RadiusX="10" RadiusY="10" Opacity="0.9" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="200" />
+            <TextBlock x:Name="final" HorizontalAlignment="Center" VerticalAlignment="Center" Width="285" RenderTransformOrigin="0.5,0.5" Height="178" FontFamily="Arial Black" Text="sdfsdf weew wer f" FontSize="32" TextAlignment="Center" TextWrapping="Wrap" Background="{x:Null}"  >
+            </TextBlock>
+            <Button x:Name="playAgain" Content="Play again" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,172,0,0" Height="26" Width="107" Background="#FFC3C3C3" Click="Button_Click" Visibility="Visible"/>
+            <Button x:Name="accDraw" Content="Accept" HorizontalAlignment="Left" Margin="186,172,0,0" VerticalAlignment="Top" Height="26" Width="106" Click="acceptDraw_Click" Visibility="Collapsed"/>
+            <Button x:Name="decDraw" Content="Decline" HorizontalAlignment="Left" Margin="8,172,0,0" VerticalAlignment="Top" Height="26" Width="106" Click="declineDraw_Click" Visibility="Collapsed"/>
+
+        </Grid>
+
+
+
+    </Grid>
+
+</Window>
