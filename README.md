@@ -6,9 +6,9 @@ After 5 days of work, dedicating 4 hours each day, I am pleased to present the i
 
 Key improvements include:
 
-  -Clear Class Structure: The project now has well-defined classes for the board, pieces, game logic, and players.
+    -Clear Class Structure: The project now has well-defined classes for the board, pieces, game logic, and players.
 
-  -Improved Readability: The code is organized with meaningful names and comments, making it easier to understand and maintain.
+    -Improved Readability: The code is organized with meaningful names and comments, making it easier to understand and maintain.
 
 I am excited to share this improved version and look forward to any feedback or contributions from the community.
 
